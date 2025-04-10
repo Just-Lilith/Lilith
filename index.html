@@ -24,6 +24,11 @@
             overflow: hidden;
         }
 
+        body.no-scroll {
+            overflow: hidden;
+            pointer-events: none;
+        }
+
         #background-video {
             position: fixed;
             top: 0;
@@ -54,6 +59,37 @@
             }
         }
 
+        .section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: transform 1s ease-in-out;
+        }
+
+        #section1 {
+            background: rgba(0, 0, 0, 0);
+            z-index: 2;
+        }
+
+        #section2 {
+            background: rgba(0, 0, 0, 0);
+            transform: translateY(100%);
+            z-index: 1;
+        }
+
+        .text {
+            font-size: 4rem;
+            font-family: 'InvincibleMarines', sans-serif;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
         #text {
             position: absolute;
             top: 50%;
@@ -68,6 +104,7 @@
             letter-spacing: 2px;
             opacity: 0;
             animation: fade-in-text 1.5s ease-in-out 1s forwards, slide-up 1s ease-in-out 2.5s forwards;
+            transition: opacity 0.5s ease-in-out;
         }
 
         @keyframes fade-in-text {
@@ -148,9 +185,91 @@
             color: cyan;
             text-decoration: underline;
         }
+
+        #arrow {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid white;
+            opacity: 0;
+            animation: fade-in-arrow 1s ease-in-out 8.5s forwards, bounce-arrow 1s ease-in-out 9.5s infinite;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        @keyframes fade-in-arrow {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce-arrow {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(5px);
+            }
+        }
+
+        body.scroll-down #section1 {
+            transform: translateY(-100%);
+        }
+
+        body.scroll-down #section2 {
+            transform: translateY(0);
+        }
+
+        body.scroll-up #section1 {
+            transform: translateY(0);
+        }
+
+        body.scroll-up #section2 {
+            transform: translateY(100%);
+        }
+
+        body.scroll-down #text,
+        body.scroll-down #dialogue,
+        body.scroll-down #new-line,
+        body.scroll-down #arrow {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.scroll-up #text,
+        body.scroll-up #dialogue,
+        body.scroll-up #new-line,
+        body.scroll-up #arrow {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.scroll-down #arrow,
+        body.scroll-up #arrow {
+            display: none;
+        }
+
+        body.scroll-up #section2 .text {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.scroll-down #section2 .text {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
     </style>
 </head>
-<body>
+<body class="no-scroll">
     <video id="background-video" autoplay muted loop>
         <source src="Lilith.webm" type="video/webm">
         Your browser does not support the video tag.
@@ -158,16 +277,41 @@
 
     <div id="overlay"></div>
 
-    <div id="text">Just Lilith</div>
+    <div id="section1" class="section">
+        <div id="text">Just Lilith</div>
+        <div id="dialogue">We are here, with Lilith, and her cake, in the Eternity.</div>
+        <div id="new-line">Oh by the way, you can download the theme <a href="https://drive.google.com/uc?export=download&id=15fvSrrxXKlhOJWwgJZ5wKKnItCxN5BSB" target="_blank">here</a>.</div>
+        <div id="arrow"></div>
+    </div>
 
-    <div id="dialogue">We are here, with Lilith, and her cake, in the Eternity.</div>
-
-    <div id="new-line">Oh by the way, you can download the theme <a href="https://drive.google.com/uc?export=download&id=15fvSrrxXKlhOJWwgJZ5wKKnItCxN5BSB" target="_blank">here</a>.</div>
+    <div id="section2" class="section">
+        <div class="text">Lilith is Eternal</div>
+    </div>
 
     <script>
         setTimeout(() => {
             document.getElementById('new-line').style.display = 'block';
         }, 11500);
+
+        setTimeout(() => {
+            document.body.classList.remove('no-scroll');
+        }, 9500);
+
+        let isScrolledDown = false;
+
+        window.addEventListener('wheel', (event) => {
+            if (!document.body.classList.contains('no-scroll')) {
+                if (event.deltaY > 0 && !isScrolledDown) {
+                    isScrolledDown = true;
+                    document.body.classList.add('scroll-down');
+                    document.body.classList.remove('scroll-up');
+                } else if (event.deltaY < 0 && isScrolledDown) {
+                    isScrolledDown = false;
+                    document.body.classList.add('scroll-up');
+                    document.body.classList.remove('scroll-down');
+                }
+            }
+        });
     </script>
 </body>
 </html>
