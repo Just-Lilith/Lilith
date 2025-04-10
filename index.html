@@ -197,8 +197,7 @@
             border-right: 10px solid transparent;
             border-top: 10px solid white;
             opacity: 0;
-            animation: fade-in-arrow 1s ease-in-out 8.5s forwards, bounce-arrow 1s ease-in-out 9.5s infinite;
-            transition: opacity 0.5s ease-in-out;
+            animation: fade-in-arrow 1s ease-in-out 8.5s forwards, bounce-arrow 1s ease-in-out 9.5s infinite, fade-in-out-arrow 2s ease-in-out 9.5s infinite;
         }
 
         @keyframes fade-in-arrow {
@@ -221,6 +220,15 @@
             }
         }
 
+        @keyframes fade-in-out-arrow {
+            0%, 100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
         body.scroll-down #section1 {
             transform: translateY(-100%);
         }
@@ -237,35 +245,8 @@
             transform: translateY(100%);
         }
 
-        body.scroll-down #text,
-        body.scroll-down #dialogue,
-        body.scroll-down #new-line,
-        body.scroll-down #arrow {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        body.scroll-up #text,
-        body.scroll-up #dialogue,
-        body.scroll-up #new-line,
-        body.scroll-up #arrow {
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        body.scroll-down #arrow,
-        body.scroll-up #arrow {
-            display: none;
-        }
-
-        body.scroll-up #section2 .text {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        body.scroll-down #section2 .text {
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out;
+        body.scrolled #arrow {
+            display: none; /* Hide arrow permanently after scrolling down */
         }
     </style>
 </head>
@@ -297,16 +278,17 @@
             document.body.classList.remove('no-scroll');
         }, 9500);
 
-        let isScrolledDown = false;
+        let isScrollingDown = false;
 
         window.addEventListener('wheel', (event) => {
             if (!document.body.classList.contains('no-scroll')) {
-                if (event.deltaY > 0 && !isScrolledDown) {
-                    isScrolledDown = true;
+                if (event.deltaY > 0 && !document.body.classList.contains('scroll-down')) {
+                    // Scroll down
                     document.body.classList.add('scroll-down');
                     document.body.classList.remove('scroll-up');
-                } else if (event.deltaY < 0 && isScrolledDown) {
-                    isScrolledDown = false;
+                    document.body.classList.add('scrolled'); 
+                } else if (event.deltaY < 0 && !document.body.classList.contains('scroll-up')) {
+                    // Scroll up
                     document.body.classList.add('scroll-up');
                     document.body.classList.remove('scroll-down');
                 }
