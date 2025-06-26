@@ -3245,3 +3245,10 @@ code{
 .outer_c0bea0 .inner_c0bea0 {
     background: rgba(0, 0, 0, 0) !important;
 }
+.userProfileInner__4afad::before,
+.profileCustomizationPreview__90b44,
+.profileEffects__9c64c,
+.themeBackground__2a7f3 {
+    display: none !important;
+    background: none !important;
+}
