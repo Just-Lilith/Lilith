@@ -3593,7 +3593,7 @@ code {
 }
 .visual-refresh .outer_c0bea0.custom-user-profile-theme {
   background-image: url("https://i.imgur.com/DhDZ4tt.gif") !important;
-  background-size: auto !important;
+  background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
