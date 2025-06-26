@@ -3244,6 +3244,7 @@ code{
 }
 .visual-refresh .outer_c0bea0.custom-user-profile-theme{
    --profile-gradient-primary-color: rgba(189, 189, 189, 0.5) !important;
+    --profile-gradient-image: url(https://i.imgur.com/DhDZ4tt.gif) !important;
 } 
 } 
 .custom-user-profile-theme .themeColor_fb7f94.primary_fb7f94 {
