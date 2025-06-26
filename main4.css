@@ -3258,3 +3258,7 @@ code{
   color: black;
   font-weight: bold;
 }
+.mentioned__5126c {
+  --background-mentioned: hsl(from var(--hsl-main-color) h s l / .2) !important;
+  --background-mentioned-hover: hsl(from var(--hsl-hover-color) h s l / .2) !important;
+}
