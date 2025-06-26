@@ -3248,3 +3248,13 @@ code{
    --profile-gradient-primary-position: center !important;
    --profile-gradient-primary-size: cover !important;
 } 
+.custom-user-profile-theme .themeColor_fb7f94.primary_fb7f94 {
+  background: rgba(0, 0, 0, 0.33);
+  color: black;
+  font-weight: bold;
+}
+.custom-user-profile-theme .themeColor_fb7f94.primary_fb7f94:hover {
+  background: rgba(0, 0, 0, 0.33);
+  color: black;
+  font-weight: bold;
+}
