@@ -38,7 +38,7 @@
 .visual-refresh:not(.platform-osx) .leading_c38106::after{
     content:"69.42.0";
     position:static;
-    margin-top:-5px;
+    margin-top:-15px;
     margin-left:5px;
     font-family:var(--code-font);
     font-size:11px;
