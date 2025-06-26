@@ -27,25 +27,26 @@
     text-shadow: 0 0 3px #ff4f4f;
 }
 .visual-refresh:not(.platform-osx) .leading_c38106::before{
-    content:"Lilith's Eternity System";
+    content:"v69.42.0";
     position:static;
-    margin-left:2px;
-    font-size:16px;
+    margin-top:2px;
+    font-size:11px;
     font-weight:600;
-    color:#e6493e;
+    color:#a33129;
     order:2;
     filter:drop-shadow(0 0 5px var(--hsl-main-color))
     text-shadow: 0 0 3px #ff4f4f;
     
 }
 .visual-refresh:not(.platform-osx) .leading_c38106::after{
-    content:"69.42.0";
+    content:"Lilith's Eternity System";
     position:static;
     margin-top:2px;
+    margin-left:2px;
     font-family:var(--code-font);
-    font-size:11px;
+    font-size:16px;
     font-weight:600;
-    color:#a33129;
+    color:#e6493e;
     order:3
     text-shadow: 0 0 3px #ff4f4f;
     
