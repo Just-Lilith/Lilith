@@ -23,7 +23,7 @@
     font-size:12px;
     line-height:1.3333333333;
     font-weight:400;
-    font-family:var(--font-primary)
+    font-family:var(--font-primary);
     text-shadow: 0 0 3px #ff4f4f;
 }
 .visual-refresh:not(.platform-osx) .leading_c38106::before{
@@ -35,6 +35,8 @@
     color:#e6493e;
     order:2;
     filter:drop-shadow(0 0 5px var(--hsl-main-color))
+    text-shadow: 0 0 3px #ff4f4f;
+    
 }
 .visual-refresh:not(.platform-osx) .leading_c38106::after{
     content:"69.42.0";
@@ -46,6 +48,8 @@
     font-weight:600;
     color:#a33129;
     order:3
+    text-shadow: 0 0 3px #ff4f4f;
+    
 }
 .button__201d5{
     border-radius:4px
