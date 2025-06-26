@@ -3576,3 +3576,18 @@ code {
   --normal-text: #dcdcde;
   --muted-text: #86868e;
 }
+.visual-refresh .interactive__972a0.interactiveSelected__972a0::before {
+  right: 0px;
+  animation-timeline: auto;
+  animation-range-start: normal;
+  animation-range-end: normal;
+  background: rgba(0, 0, 0, 00.5);
+  animation: 0.3s ease-in-out 0s 1 normal none running cv-channel-select;
+  border: 3px solid #ff6161;
+}
+.wrapper__2ea32.modeSelected__2ea32 .link__2ea32::before {
+  right: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  animation: cv-channel-select .3s ease-in-out;
+  border: 3px solid #ff6161;
+}
