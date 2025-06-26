@@ -3220,25 +3220,6 @@ code{
   animation: cv-channel-select .3s ease-in-out;
   border: 3px solid #ff6257;
 }
-.visual-refresh .outer_c0bea0.custom-user-profile-theme{
-   --profile-gradient-primary-color: rgba(189, 189, 189, 0.5) !important;
-   --profile-gradient-image: url(https://i.imgur.com/DhDZ4tt.gif) !important;
-} 
-} 
-.custom-user-profile-theme .themeColor_fb7f94.primary_fb7f94 {
-  background: rgba(0, 0, 0, 0.33);
-  color: black;
-  font-weight: bold;
-}
-.custom-user-profile-theme .themeColor_fb7f94.primary_fb7f94:hover {
-  background: rgba(0, 0, 0, 0.33);
-  color: black;
-  font-weight: bold;
-}
-.mentioned__5126c {
-  --background-mentioned: hsl(from var(--hsl-main-color) h s l / .2) !important;
-  --background-mentioned-hover: hsl(from var(--hsl-hover-color) h s l / .2) !important;
-}
 .outer_c0bea0:not(.custom-user-profile-theme) .inner_c0bea0 {
     background: rgba(0, 0, 0, 0);
 }
@@ -3246,9 +3227,14 @@ code{
     background: rgba(0, 0, 0, 0) !important;
 }
 .userProfileInner__4afad::before,
-.profileCustomizationPreview__90b44,
-.profileEffects__9c64c,
+.bannerSVGWrapper__3e7b0,
+.profileCustomizationSection__0f57e,
+.profileBackground__3e753,
 .themeBackground__2a7f3 {
-    display: none !important;
     background: none !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    opacity: 0 !important;
 }
+
