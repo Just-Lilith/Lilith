@@ -3239,3 +3239,9 @@ code{
   --background-mentioned: hsl(from var(--hsl-main-color) h s l / .2) !important;
   --background-mentioned-hover: hsl(from var(--hsl-hover-color) h s l / .2) !important;
 }
+.outer_c0bea0:not(.custom-user-profile-theme) .inner_c0bea0 {
+    background: rgba(0, 0, 0, 0);
+}
+.outer_c0bea0 .inner_c0bea0 {
+    background: rgba(0, 0, 0, 0) !important;
+}
