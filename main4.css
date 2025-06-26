@@ -3226,32 +3226,29 @@ code{
 .outer_c0bea0 .inner_c0bea0 {
     background: rgba(0, 0, 0, 0) !important;
 }
-.userProfileInner__4afad::before,
-.bannerSVGWrapper__3e7b0,
-.profileCustomizationSection__0f57e,
-.profileBackground__3e753,
-.themeBackground__2a7f3 {
+.userProfileInner__4afad::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url(https://i.imgur.com/DhDZ4tt.gif);
+    height: auto;
+    background-image: url("https://i.imgur.com/DhDZ4tt.gif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
-    opacity: 1 !important;
+    opacity: 1;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
-.userProfileInner__4afad::after {
-    background: none !important;
-    opacity: 0 !important;
-}
-.userProfileInner__4afad,
-.profileCustomizationSection__0f57e {
+.userProfileInner__4afad {
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
+.userProfileInner__4afad > .bannerSVGWrapper__3e7b0,
+.userProfileInner__4afad::after {
+    display: none !important;
 }
 
