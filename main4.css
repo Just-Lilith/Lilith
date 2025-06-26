@@ -3243,11 +3243,8 @@ code{
   border: 3px solid #ff6257;
 }
 .visual-refresh .outer_c0bea0.custom-user-profile-theme{
-  --user-popout-image: url(https://i.imgur.com/DhDZ4tt.gif);
-  --user-popout-position: center;
-  --user-popout-size: cover;
-  --user-popout-attachment: fixed;
-  --user-popout-filter: var(--background-filter);
+   --profile-gradient-primary-color: rgba(189, 189, 189, 0.5) !important;
+} 
 } 
 .custom-user-profile-theme .themeColor_fb7f94.primary_fb7f94 {
   background: rgba(0, 0, 0, 0.33);
