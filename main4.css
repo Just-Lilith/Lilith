@@ -3227,15 +3227,15 @@ code{
   animation-timeline: auto;
   animation-range-start: normal;
   animation-range-end: normal;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(63, 63, 63, 0.3);
   animation: 0.3s ease-in-out 0s 1 normal none running cv-channel-select;
-  border: 3px solid var(--main-color);
+  border: 3px solid #ff6257;
 }
 .wrapper__2ea32.modeSelected__2ea32 .link__2ea32::before {
   right: 0px;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(63, 63, 63, 0.3);
   animation: cv-channel-select .3s ease-in-out;
-  border: 3px solid var(--main-color);
+  border: 3px solid #ff6257;
 }
 .visual-refresh .outer_c0bea0.custom-user-profile-theme{
    --profile-gradient-primary-color: none !important;
