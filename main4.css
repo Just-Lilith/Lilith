@@ -3243,5 +3243,8 @@ code{
   border: 3px solid #ff6257;
 }
 .visual-refresh .outer_c0bea0.custom-user-profile-theme{
-   --profile-gradient-primary-color: rgba(0, 0, 0, 0.66) !important;
+   --profile-gradient-primary-color: rgba(0, 0, 0, 0.33) !important;
+   --profile-gradient-primary-image: url(https://i.imgur.com/DhDZ4tt.gif) !important;
+   --profile-gradient-primary-position: center !important;
+   --profile-gradient-primary-size: cover !important;
 } 
