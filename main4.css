@@ -36,12 +36,12 @@
   filter: drop-shadow(0 0 5px var(--hsl-main-color));
 }
 .visual-refresh:not(.platform-osx) .leading_c38106::after {
-  content: " v69.42.";
+  content: " v69.42.0";
   position: static;
-  margin-top: -5px;
+  margin-top: 3px;
   margin-left: 5px;
   font-family: var(--code-font);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: #ff6161;
   order: 3;
