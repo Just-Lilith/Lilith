@@ -27,10 +27,11 @@
     text-shadow: 0 0 3px #ff4f4f;
 }
 .visual-refresh:not(.platform-osx) .leading_c38106::before{
-    content:"v69.42.0";
+    content:" v69.42.0";
     position:static;
-    margin-top:2px;
-    font-size:11px;
+    margin-top:4px;
+    font-size:13px;
+    font-family:var(--code-font);
     font-weight:600;
     color:#a33129;
     order:2;
