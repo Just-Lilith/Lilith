@@ -3596,6 +3596,7 @@ code {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
   --profile-gradient-primary-color: transparent !important;
   --profile-gradient-secondary-color: transparent !important;
   --profile-overlay-color: transparent !important;
