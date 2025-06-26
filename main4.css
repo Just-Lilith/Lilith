@@ -29,7 +29,7 @@
 .visual-refresh:not(.platform-osx) .leading_c38106::before{
     content:"Lilith's Eternity System";
     position:static;
-    margin-left:10px;
+    margin-left:2px;
     font-size:16px;
     font-weight:600;
     color:#e6493e;
@@ -41,8 +41,8 @@
 .visual-refresh:not(.platform-osx) .leading_c38106::after{
     content:"69.42.0";
     position:static;
-    margin-top:-1px;
-    margin-left:5px;
+    margin-top:2px;
+    margin-left:35px;
     font-family:var(--code-font);
     font-size:11px;
     font-weight:600;
