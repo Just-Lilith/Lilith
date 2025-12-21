@@ -38,9 +38,9 @@
 }
 :is(.theme-dark, .theme-light):not(.platform-osx)
   .c38106a3f0c3ca76-leading::after {
-  content: "7.0.1";
+  content: "69.42.0";
   position: static;
-  margin-top: -5px;
+  margin-top: -9px;
   margin-left: 5px;
   font-family: var(--code-font);
   font-size: 11px;
