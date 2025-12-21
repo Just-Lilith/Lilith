@@ -3895,3 +3895,11 @@ code {
   --normal-text: #dcdcde;
   --muted-text: #86868e;
 }
+:is(.theme-dark, .theme-light):not(.platform-osx)
+.c38106a3f0c3ca76-leading::before,
+:is(.theme-dark, .theme-light):not(.platform-osx)
+.c38106a3f0c3ca76-leading::after {
+  text-shadow:
+    0 0 4px rgba(245, 39, 39, 0.44),
+    0 0 8px rgba(245, 39, 39, 0.44),
+    0 0 14px rgba(245, 39, 39, 0.44);
